@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Drivr</title>
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<!-- <meta name="apple-mobile-web-app-status-bar" content="">
+		<meta name="apple-mobile-web-app-title" content="Drivr">
+		<meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
+		<meta name="msaplication-TileColor" content="">
+		<link rel="manifest" href="/manifest.json">
+		<link rel="applce-touch-icon" href="images/icons/icon-152x152.png"> -->
+	</head>
+
+	<body>
+		<div id="app">
+		</div>
+		<script>
+			if ('serviceWorker' in navigator) {
+				window.addEventListener('load', () => {
+					navigator.serviceWorker.register('service-worker.js')
+						.then(registration => console.log('ServiceWorker registered'), (err) => {
+							console.log('ServiceWorker registration failed');
+						})
+						.catch(err => console.log(err));
+				});
+			} else {
+				console.log('ServiceWorker not supported');
+			}
+		</script>
+	</body>
+</html>

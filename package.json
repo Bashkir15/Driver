@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "author": "",
   "license": "ISC",
@@ -81,6 +83,8 @@
     "redux-form": "^7.0.3",
     "redux-observable": "^0.14.1",
     "rxjs": "^5.4.2",
-    "uuid": "^3.1.0"
-  }
+    "uuid": "^3.1.0",
+    "snyk": "^1.316.1"
+  },
+  "snyk": true
 }
